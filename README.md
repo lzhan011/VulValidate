@@ -17,6 +17,12 @@ triggered, never on a reading of the code.
   function, and the provenance of each label. Start with
   [`dataset/README.md`](dataset/README.md).
 
+- [`bigvul_corrected/`](bigvul_corrected/) — Big-Vul alone, in its own release format, with
+  the `vul` column replaced by these labels and every other column and row left as the
+  release had them. For reproducing Big-Vul-only experiments without changing their data
+  loader. The 10 GB file itself is a release asset; the folder holds the full list of label
+  changes and how to download and verify it.
+
 More will be added to this repository.
 
 ## The collection in one table

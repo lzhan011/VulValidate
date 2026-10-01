@@ -1,0 +1,28 @@
+{
+ "mode": "labels-only: every release row kept, no cross-dataset dedup",
+ "built_utc": "2026-09-29T22:12:35+00:00",
+ "label_authority": "the VulValidate merged corpus in this repository's dataset/ folder",
+ "content_source": "MSR_data_cleaned.csv from the Big-Vul release",
+ "output": "MSR_data_cleaned_labels_only.csv",
+ "dedup_target_checks": {
+  "groups_agreeing": 208376,
+  "groups_disagreeing": 0,
+  "survivors_v6_also_excluded": 578
+ },
+ "conflict_policy": "flip",
+ "conflict_rows": 1024,
+ "conflict_rows_with_a_winner": 1024,
+ "verdict_sources": {
+  "v6_kept": 182254,
+  "label_conflict": 1024,
+  "dedup_twin": 2
+ },
+ "counts": {
+  "rows_read": 188636,
+  "kept": 181124,
+  "rows_written": 188636,
+  "conflict_flipped": 1024,
+  "unchanged_no_v6_verdict": 5356,
+  "relabelled": 1132
+ }
+}
