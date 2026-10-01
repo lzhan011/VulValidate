@@ -1,0 +1,169 @@
+{
+ "files": {
+  "dataset/train.part1.jsonl.gz": {
+   "compressed_bytes": 56388532,
+   "uncompressed_bytes": 379740792,
+   "lines": 215012,
+   "sha256_uncompressed": "452b5ccf3a88dde1d424e59de5e423a248710e03e5e76b256609dcc9c9824824",
+   "part_of": "train.jsonl"
+  },
+  "dataset/train.part2.jsonl.gz": {
+   "compressed_bytes": 77973767,
+   "uncompressed_bytes": 496441009,
+   "lines": 215011,
+   "sha256_uncompressed": "58a208032c824b9f27bc719be0f552dc6d6663f238b7cf84dc6eddec48e9606b",
+   "part_of": "train.jsonl"
+  },
+  "dataset/valid.jsonl.gz": {
+   "compressed_bytes": 19516647,
+   "uncompressed_bytes": 109300016,
+   "lines": 53772,
+   "sha256_uncompressed": "62d8aac2e528e918a177677119b6ac381d7c7410841902da2cb7749b2d575ccf"
+  },
+  "dataset/test.jsonl.gz": {
+   "compressed_bytes": 19184087,
+   "uncompressed_bytes": 108352145,
+   "lines": 53796,
+   "sha256_uncompressed": "30557f36cce5d2306f7e1e528d3e0f1f44957163b483f0f7b17258bcd383144e"
+  },
+  "dataset/train_paired.jsonl.gz": {
+   "compressed_bytes": 15195513,
+   "uncompressed_bytes": 119360942,
+   "lines": 23488,
+   "sha256_uncompressed": "fcdcfbd8d3611ab0af5331e3756c97e4c17fe21fee7bd4bf7e3c379a2c417c71"
+  },
+  "dataset/valid_paired.jsonl.gz": {
+   "compressed_bytes": 2018085,
+   "uncompressed_bytes": 14626306,
+   "lines": 2972,
+   "sha256_uncompressed": "9f43ad873c48810ff9c3a93b8f5b005e14395468cd0e318d20d251bea997251d"
+  },
+  "dataset/test_paired.jsonl.gz": {
+   "compressed_bytes": 2083785,
+   "uncompressed_bytes": 15047702,
+   "lines": 2964,
+   "sha256_uncompressed": "8d7d14ba1cd3d329be1b0449c682495c1379410d1494e89d928679f8e0edc829"
+  }
+ },
+ "originals": {
+  "train.jsonl": {
+   "sha256": "2f52a41735ee679eb499b7d83ed6de94e5606bfa16ff0273eae5b91c7a65ec24",
+   "bytes": 876181801,
+   "lines": 430023
+  },
+  "valid.jsonl": {
+   "sha256": "62d8aac2e528e918a177677119b6ac381d7c7410841902da2cb7749b2d575ccf",
+   "bytes": 109300016,
+   "lines": 53772
+  },
+  "test.jsonl": {
+   "sha256": "30557f36cce5d2306f7e1e528d3e0f1f44957163b483f0f7b17258bcd383144e",
+   "bytes": 108352145,
+   "lines": 53796
+  },
+  "train_paired.jsonl": {
+   "sha256": "fcdcfbd8d3611ab0af5331e3756c97e4c17fe21fee7bd4bf7e3c379a2c417c71",
+   "bytes": 119360942,
+   "lines": 23488
+  },
+  "valid_paired.jsonl": {
+   "sha256": "9f43ad873c48810ff9c3a93b8f5b005e14395468cd0e318d20d251bea997251d",
+   "bytes": 14626306,
+   "lines": 2972
+  },
+  "test_paired.jsonl": {
+   "sha256": "8d7d14ba1cd3d329be1b0449c682495c1379410d1494e89d928679f8e0edc829",
+   "bytes": 15047702,
+   "lines": 2964
+  }
+ },
+ "reassembly_checked": true,
+ "statistics": {
+  "train.jsonl": {
+   "rows": 430023,
+   "positive": 12682,
+   "by_corpus": {
+    "diversevul": 164067,
+    "bigvul": 149420,
+    "primevul": 116536
+   },
+   "by_label_source": {
+    "original_non_vulnerable": 403058,
+    "dynamic_confirmed": 12682,
+    "fixed_function_of_confirmed": 11744,
+    "dynamic_label_noise_corrected": 2539
+   }
+  },
+  "valid.jsonl": {
+   "rows": 53772,
+   "positive": 1599,
+   "by_corpus": {
+    "diversevul": 20683,
+    "bigvul": 18582,
+    "primevul": 14507
+   },
+   "by_label_source": {
+    "original_non_vulnerable": 50352,
+    "dynamic_confirmed": 1599,
+    "fixed_function_of_confirmed": 1486,
+    "dynamic_label_noise_corrected": 335
+   }
+  },
+  "test.jsonl": {
+   "rows": 53796,
+   "positive": 1609,
+   "by_corpus": {
+    "diversevul": 20465,
+    "bigvul": 18632,
+    "primevul": 14699
+   },
+   "by_label_source": {
+    "original_non_vulnerable": 50399,
+    "dynamic_confirmed": 1609,
+    "fixed_function_of_confirmed": 1482,
+    "dynamic_label_noise_corrected": 306
+   }
+  },
+  "train_paired.jsonl": {
+   "rows": 23488,
+   "positive": 11744,
+   "by_corpus": {
+    "diversevul": 11452,
+    "bigvul": 6960,
+    "primevul": 5076
+   },
+   "by_label_source": {
+    "dynamic_confirmed": 11744,
+    "fixed_function_of_confirmed": 11744
+   }
+  },
+  "valid_paired.jsonl": {
+   "rows": 2972,
+   "positive": 1486,
+   "by_corpus": {
+    "diversevul": 1432,
+    "bigvul": 900,
+    "primevul": 640
+   },
+   "by_label_source": {
+    "dynamic_confirmed": 1486,
+    "fixed_function_of_confirmed": 1486
+   }
+  },
+  "test_paired.jsonl": {
+   "rows": 2964,
+   "positive": 1482,
+   "by_corpus": {
+    "diversevul": 1414,
+    "bigvul": 900,
+    "primevul": 650
+   },
+   "by_label_source": {
+    "dynamic_confirmed": 1482,
+    "fixed_function_of_confirmed": 1482
+   }
+  }
+ },
+ "built": "2026-10-01",
+ "note": "sha256_uncompressed is the digest of the decompressed stream, so it can be compared against the original file directly"
+}
