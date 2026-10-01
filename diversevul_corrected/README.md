@@ -74,6 +74,6 @@ why those 2,002 rows are listed individually.
 
 ## Related
 
-The merged three-corpus collection is in [`../dataset/`](../dataset/), with one schema
+The merged three-corpus collection is in [`../combined_dataset/`](../combined_dataset/), with one schema
 across the three corpora and a `label_source` field on every row. This folder exists for
 reproducing DiverseVul-only experiments in their original format.

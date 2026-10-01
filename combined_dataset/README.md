@@ -1,8 +1,14 @@
-# Function-level splits
+# Combined dataset
 
-Three source corpora — Big-Vul, DiverseVul and PrimeVul — merged into one function-level
-collection, with every vulnerable label re-derived from a dynamic attack rather than
-inherited from the original release.
+Big-Vul, DiverseVul and PrimeVul with their corrected labels, merged into one
+function-level collection under a single schema, with every vulnerable label re-derived
+from a dynamic attack rather than inherited from the original release.
+
+Each corpus is also published on its own, in its own release format, under
+[`../bigvul_corrected/`](../bigvul_corrected/),
+[`../primevul_corrected/`](../primevul_corrected/) and
+[`../diversevul_corrected/`](../diversevul_corrected/). Those keep each release's fields and
+row order for code that already reads them; this folder is the merged version.
 
 Every file is newline-delimited JSON, gzipped. The train split is in two pieces because
 GitHub refuses any single file over 100 MB; each piece is a valid `.jsonl.gz` on its own.
@@ -32,14 +38,14 @@ def read(path):
         for line in fh:
             yield json.loads(line)
 
-train = list(read("dataset/train.part1.jsonl.gz")) + \
-        list(read("dataset/train.part2.jsonl.gz"))
+train = list(read("combined_dataset/train.part1.jsonl.gz")) + \
+        list(read("combined_dataset/train.part2.jsonl.gz"))
 ```
 
 To get the original single file back:
 
 ```bash
-cat dataset/train.part1.jsonl.gz dataset/train.part2.jsonl.gz | gunzip > train.jsonl
+cat combined_dataset/train.part1.jsonl.gz combined_dataset/train.part2.jsonl.gz | gunzip > train.jsonl
 ```
 
 That works because concatenated gzip members decompress as one stream.

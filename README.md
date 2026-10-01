@@ -12,10 +12,10 @@ triggered, never on a reading of the code.
 
 ## What is here
 
-- [`dataset/`](dataset/) — the merged function-level splits, 537,591 rows across the three
-  corpora, with the re-derived labels, the fixed counterpart of every confirmed vulnerable
+- [`combined_dataset/`](combined_dataset/) — all three corpora merged into one, 537,591
+  rows, with the corrected labels, the fixed counterpart of every confirmed vulnerable
   function, and the provenance of each label. Start with
-  [`dataset/README.md`](dataset/README.md).
+  [`combined_dataset/README.md`](combined_dataset/README.md).
 
 - [`bigvul_corrected/`](bigvul_corrected/) — Big-Vul alone, in its own release format, with
   the `vul` column replaced by these labels and every other column and row left as the

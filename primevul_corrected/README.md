@@ -53,7 +53,7 @@ why those rows are listed individually rather than folded silently into the file
 
 ## Related
 
-The merged three-corpus collection is in [`../dataset/`](../dataset/), with one schema
+The merged three-corpus collection is in [`../combined_dataset/`](../combined_dataset/), with one schema
 across Big-Vul, DiverseVul and PrimeVul, a `label_source` field on every row, and the fixed
 counterpart of every confirmed vulnerable function. This folder exists for reproducing
 PrimeVul-only experiments in their original format.

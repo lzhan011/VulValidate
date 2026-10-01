@@ -1,7 +1,7 @@
 {
  "mode": "labels-only: every release row kept, no cross-dataset dedup",
  "built_utc": "2026-09-29T22:05:24+00:00",
- "label_authority": "the VulValidate merged corpus in this repository's dataset/ folder",
+ "label_authority": "the VulValidate merged corpus in this repository's combined_dataset/ folder",
  "content_source": "the diversevul release",
  "output": "diversevul_20230702.json, row for row",
  "join_key": "line number of the release file",
