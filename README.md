@@ -71,6 +71,35 @@ checkpoint against the corrected labels instead of the original ones takes its F
 model produces barely moves; what moves is where a fixed decision threshold sits in the
 new label distribution.
 
+## How the labels were produced
+
+The procedure these labels come from is published as an installable Agent Skill:
+
+**[vuln-label-dynamic-confirmation](https://github.com/lzhan011/vuln-label-dynamic-confirmation-skill)**
+
+It is what a coding agent in Claude Code or OpenAI Codex reads to do this work: the
+operating order, the hard rules, and the per-dataset parameters for Big-Vul, PrimeVul,
+MegaVul and DiverseVul. The parts that decide what the labels in this repository mean:
+
+- **Every positive sample ends in exactly one of four outcomes** — confirmed, label noise,
+  attacked without a decision, or not dynamically tested — each with required evidence
+  fields, and the four counts must add up to the denominator.
+- **The two-sided differential is the standard path.** Build the pre-fix and post-fix code
+  with the same driver and the same input, so the only variable is the labelled function
+  body, and record a real integer exit code for both sides.
+- **Attribution is by source line range, never by bare function name.** A fault in a
+  function called from the labelled one still confirms; a fault in a caller, a sibling, or
+  in harness-written code does not.
+- **A label is only called noise after a real dynamic attack**, behind seven gates including
+  proof that the stored body matches upstream and that the patched lines were executed.
+  Reading the code alone yields a suspicion, not a label change.
+- **Failure classes are kept apart** rather than folded into "confirmed" or "not
+  confirmed": synthetic triggers, harness tautologies, inverted polarity, both sides
+  faulting, unattributable sanitizer output, and untested samples each have a name.
+
+The last two are why this repository lists every changed label individually instead of
+only shipping the corrected files.
+
 ## Licence and provenance
 
 The function bodies, commit ids and CVE references come from the Big-Vul, DiverseVul and

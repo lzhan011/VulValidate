@@ -81,6 +81,11 @@ That works because concatenated gzip members decompress as one stream.
 reached with an attack input, and the failure was attributed to it. A label was never
 changed to non-vulnerable on a reading of the code alone.
 
+The rules behind those four values — the four permitted outcomes, the two-sided
+differential, attribution by line range rather than by function name, and the gates a
+label-noise decision has to pass — are published as an installable Agent Skill:
+[vuln-label-dynamic-confirmation](https://github.com/lzhan011/vuln-label-dynamic-confirmation-skill).
+
 ## Pairs
 
 The `*_paired.jsonl.gz` files hold only confirmed vulnerable functions and their fixed
