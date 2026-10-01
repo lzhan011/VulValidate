@@ -23,9 +23,27 @@ triggered, never on a reading of the code.
   loader. The 10 GB file itself is a release asset; the folder holds the full list of label
   changes and how to download and verify it.
 
+- [`primevul_corrected/`](primevul_corrected/) — PrimeVul alone, its three release files with
+  `target` replaced by these labels, partition and field layout untouched.
+- [`diversevul_corrected/`](diversevul_corrected/) — DiverseVul alone, same arrangement.
+
+Each per-corpus folder lists every label it changed from that corpus's release, with the
+reason for each one.
+
 More will be added to this repository.
 
-## The collection in one table
+## Each corpus on its own
+
+| | rows | vulnerable (release → here) | labels changed |
+|---|---|---|---|
+| Big-Vul | 188,636 | 10,900 → 10,792 | 2,156 |
+| DiverseVul | 330,492 | 18,945 → 17,089 | 2,148 |
+| PrimeVul | 224,533 | 6,004 → 6,115 | 285 |
+
+PrimeVul gains vulnerable functions where the other two lose them: most of its changes are
+functions it labelled non-vulnerable that a confirmed twin in another corpus outranked.
+
+## The merged collection in one table
 
 | | rows | vulnerable | pairs |
 |---|---|---|---|

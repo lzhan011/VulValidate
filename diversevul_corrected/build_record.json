@@ -1,0 +1,31 @@
+{
+ "mode": "labels-only: every release row kept, no cross-dataset dedup",
+ "built_utc": "2026-09-29T22:05:24+00:00",
+ "label_authority": "the VulValidate merged corpus in this repository's dataset/ folder",
+ "content_source": "the diversevul release",
+ "output": "diversevul_20230702.json, row for row",
+ "join_key": "line number of the release file",
+ "dedup_target_checks": {
+  "groups_agreeing": 208376,
+  "groups_disagreeing": 0,
+  "survivors_v6_also_excluded": 578
+ },
+ "conflict_policy": "flip",
+ "conflict_rows": 146,
+ "conflict_rows_with_a_winner": 146,
+ "verdict_sources": {
+  "v6_kept": 198066,
+  "label_conflict": 146,
+  "dedup_twin": 125817,
+  "twin_also_excluded": 80
+ },
+ "counts": {
+  "rows_read": 330492,
+  "kept": 321881,
+  "rows_written": 330492,
+  "unchanged_no_v6_verdict": 6383,
+  "relabelled": 2002,
+  "conflict_flipped": 146,
+  "unchanged_twin_also_excluded": 80
+ }
+}

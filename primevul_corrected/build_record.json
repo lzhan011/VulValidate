@@ -1,0 +1,59 @@
+{
+ "mode": "labels-only: every release row kept, no cross-dataset dedup",
+ "built_utc": "2026-09-29T22:04:44+00:00",
+ "label_authority": "the VulValidate merged corpus in this repository's dataset/ folder",
+ "content_source": "the primevul release",
+ "output": "the release's three jsonl files, row for row",
+ "join_key": "PrimeVul idx, global across the three release files",
+ "partition_policy": "the release's own three files are preserved row for row",
+ "conflict_policy": "flip",
+ "conflict_rows": 198,
+ "conflict_rows_with_a_winner": 198,
+ "dedup_target_checks": {
+  "groups_agreeing": 208376,
+  "groups_disagreeing": 0,
+  "survivors_v6_also_excluded": 578
+ },
+ "verdict_sources": {
+  "v6_kept": 142559,
+  "label_conflict": 198,
+  "dedup_twin": 81183,
+  "twin_also_excluded": 213
+ },
+ "counts_total": {
+  "rows_read": 224533,
+  "unchanged_no_v6_verdict": 380,
+  "rows_written": 224533,
+  "kept": 223655,
+  "relabelled": 87,
+  "unchanged_twin_also_excluded": 213,
+  "conflict_flipped": 198
+ },
+ "counts_per_release_split": {
+  "train": {
+   "rows_read": 175797,
+   "unchanged_no_v6_verdict": 328,
+   "rows_written": 175797,
+   "kept": 175042,
+   "relabelled": 75,
+   "unchanged_twin_also_excluded": 213,
+   "conflict_flipped": 139
+  },
+  "valid": {
+   "rows_read": 23948,
+   "kept": 23879,
+   "rows_written": 23948,
+   "relabelled": 7,
+   "unchanged_no_v6_verdict": 26,
+   "conflict_flipped": 36
+  },
+  "test": {
+   "rows_read": 24788,
+   "kept": 24734,
+   "rows_written": 24788,
+   "relabelled": 5,
+   "unchanged_no_v6_verdict": 26,
+   "conflict_flipped": 23
+  }
+ }
+}
