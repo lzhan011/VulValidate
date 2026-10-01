@@ -40,6 +40,11 @@ More will be added to this repository.
 | DiverseVul | 330,492 | 18,945 → 17,089 | 2,148 |
 | PrimeVul | 224,533 | 6,004 → 6,115 | 285 |
 
+The PrimeVul row counts **PrimeVul-v0.1**, which holds 6,004 vulnerable functions where the
+PrimeVul paper reports 6,968; v0.1 keeps only the vulnerabilities whose metadata its authors
+could retrieve, and [`primevul_corrected/`](primevul_corrected/) sets the two releases side
+by side.
+
 PrimeVul gains vulnerable functions where the other two lose them: most of its changes are
 functions it labelled non-vulnerable that a confirmed twin in another corpus outranked.
 

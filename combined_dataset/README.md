@@ -102,6 +102,11 @@ counterpart available, so they appear in the splits but in none of the pair file
 | validation | 18,582 | 20,683 | 14,507 |
 | test | 18,632 | 20,465 | 14,699 |
 
+The PrimeVul side is built on **PrimeVul-v0.1** (224,533 functions, 6,004 vulnerable), not
+the original release the PrimeVul paper reports (235,768 / 6,968); v0.1 keeps only the
+vulnerabilities whose metadata its authors could retrieve. See
+[`../primevul_corrected/README.md`](../primevul_corrected/README.md) for the comparison.
+
 Splitting is by function, and a vulnerable function and its fixed counterpart always land
 in the same split, so a model cannot see one side in training and be tested on the other.
 

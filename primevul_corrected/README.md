@@ -5,6 +5,35 @@ Every other field is the release's own, every row is still here in the release's
 and the release's train/validation/test partition is untouched, so code that already reads
 PrimeVul needs no change beyond the file path.
 
+## Which PrimeVul release this is built on
+
+**PrimeVul-v0.1**, the metadata-enhanced release of 2024-09-05: 224,533 functions, 6,004 of
+them vulnerable.
+
+That is fewer than the 6,968 vulnerable and 228,800 benign functions the PrimeVul paper
+reports in its Table III, and the difference is the authors' own, not an artefact of this
+work. v0.1 adds commit URLs, CVE descriptions, NVD links and file-level context, and its
+release note says it keeps only the vulnerabilities whose metadata they could retrieve:
+
+> In PrimeVul-v0.1, we only include vulnerabilities that we successfully retrieved their
+> metadata. For the full set of samples that we originally used in the paper, please refer
+> to the original release.
+
+| | original release (2024-03-27) | v0.1, used here |
+|---|---|---|
+| vulnerable | 6,968 | 6,004 |
+| benign | 228,800 | 218,529 |
+| pairs | 5,480 | 4,704 |
+| fields per record | 8 | 15 |
+
+Both releases were counted file by file to confirm this: the original release reproduces the
+paper's Table III in all six of its cells, split by split. Every one of v0.1's 6,004
+vulnerable functions carries a CWE, which is what dropping the metadata-incomplete ones
+looks like from the inside.
+
+So a reader comparing these files against the paper will find 964 fewer vulnerable
+functions before any relabelling, and that gap is PrimeVul's, not VulValidate's.
+
 ## Files
 
 | file | rows | vulnerable (release → here) | compressed |
