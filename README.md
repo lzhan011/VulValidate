@@ -30,6 +30,19 @@ triggered, never on a reading of the code.
 Each per-corpus folder lists every label it changed from that corpus's release, with the
 reason for each one.
 
+- [`reproduction/`](reproduction/) — re-run the findings yourself. Every label marked
+  `dynamic_confirmed` came from running the code, and each of those runs is packaged as a
+  Docker image: one command, no clone and no account.
+
+  ```bash
+  docker run --rm --network none vulvalidate/bigvul-repro:178202
+  ```
+
+  51 Big-Vul findings are published so far, with PrimeVul and DiverseVul reserved.
+  [`reproduction/README.md`](reproduction/README.md) says how to read what a run prints —
+  which matters, because an exit code of 0 means the script finished, not that a
+  vulnerability reproduced.
+
 More will be added to this repository.
 
 ## Each corpus on its own
