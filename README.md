@@ -74,6 +74,30 @@ after an attack found nothing, and 14,712 are the post-fix counterparts of confi
 functions. The remaining 503,809 keep the non-vulnerable label their original release
 gave them.
 
+## The audit behind these labels
+
+Every function the three corpora label vulnerable was put through the procedure below, and
+each one ends in exactly one of four outcomes. The four counts add up to each corpus's
+vulnerable population.
+
+| outcome | Big-Vul | PrimeVul | DiverseVul | total | distinct bodies |
+|---|---|---|---|---|---|
+| confirmed — a vulnerability was triggered in the function | 4,412 | 5,537 | 10,561 | 20,510 | 15,890 |
+| label correction — attacked, nothing triggered | 4,730 | 87 | 2,002 | 6,819 | 6,774 |
+| attacked, no decision reached | 1,480 | 374 | 6,127 | 7,981 | 7,777 |
+| not dynamically tested | 278 | 6 | 255 | 539 | 539 |
+| **total** | **10,900** | **6,004** | **18,945** | **35,849** | **30,980** |
+
+The last column counts byte-identical function bodies within each outcome, comments and
+whitespace preserved. Repetition sits almost entirely in the confirmations: 4,620 of the
+4,869 repeated instances are confirmed, against 45 label corrections. The four per-outcome
+counts add to 30,980; the number of bodies in their union is 30,109, because one body can
+sit under different outcomes in different corpora.
+
+The 15,890 distinct confirmed bodies are the vulnerable class of the release. Only the first
+two outcomes reach the released labels: the two unresolved outcomes are kept as audit
+records and left out of the learning labels rather than folded into either class.
+
 ## Why the labels matter for measurement
 
 A detector's precision is measured against the labels, so label noise moves the score
